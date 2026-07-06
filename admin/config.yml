@@ -2,7 +2,7 @@ backend:
   name: github
   repo: levukaa1337/levukaa1337.github.io   # <-- your GitHub username/repo-name
   branch: main
-  base_url: https://YOUR-NETLIFY-OAUTH-SITE.netlify.app   # <-- set this after step 2 below (see instructions)
+  base_url: https://moriczgimi.netlify.app   # <-- set this after step 2 below (see instructions)
 
 # Where uploaded photos get stored in the repo, and how they're linked in pages.
 media_folder: "images/hirek"
