@@ -1,0 +1,35 @@
+backend:
+  name: github
+  repo: levukaa1337/levukaa1337.github.io   # <-- your GitHub username/repo-name
+  branch: main
+  base_url: https://YOUR-NETLIFY-OAUTH-SITE.netlify.app   # <-- set this after step 2 below (see instructions)
+
+# Where uploaded photos get stored in the repo, and how they're linked in pages.
+media_folder: "images/hirek"
+public_folder: "/images/hirek"
+
+collections:
+  - name: "hirek"
+    label: "Hírek (Iskolai hírek)"
+    label_singular: "Hír"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Cím", name: "title", widget: "string" }
+      - { label: "Dátum", name: "date", widget: "datetime" }
+      - { label: "Kategória / címke", name: "tag", widget: "string", required: false, hint: "pl. Kirándulás, Verseny, Projektnap" }
+      - { label: "Évfolyam (opcionális)", name: "grade", widget: "string", required: false }
+      - { label: "Rövid leírás (a Hírek listában jelenik meg)", name: "excerpt", widget: "text" }
+      - { label: "Borítókép (a Hírek lista kártyáján)", name: "thumbnail", widget: "image", required: false }
+      - label: "Fotógaléria"
+        name: "gallery"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Fotó", name: "src", widget: "image" }
+          - { label: "Fotó leírása (kép alt szövege)", name: "alt", widget: "string" }
+      - { label: "Cikk szövege", name: "body", widget: "markdown" }
+    view_filters:
+      - label: "Legújabbak elöl"
+        field: date

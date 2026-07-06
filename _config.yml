@@ -1,0 +1,14 @@
+title: Móricz Zsigmond Gimnázium
+description: Tiszakécske
+markdown: kramdown
+permalink: /hirek/:title/
+collections:
+  posts:
+    output: true
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# GitHub Pages builds this automatically with the "github-pages" gem — no extra setup needed.
+# Netlify builds it using the Gemfile + netlify.toml at the repo root instead.
