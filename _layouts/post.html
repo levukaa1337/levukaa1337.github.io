@@ -1,0 +1,111 @@
+---
+layout: default
+---
+<div class="page-hero" style="padding-bottom:0;">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="{{ '/' | relative_url }}">Kezdőlap</a> / <a href="{{ '/hirek.html' | relative_url }}">Hírek</a> / {{ page.title }}</div>
+  </div>
+</div>
+
+<div class="article-hero" aria-hidden="true">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+</div>
+
+<section style="padding-top:44px;">
+  <div class="wrap">
+    <div class="prose">
+      <div class="article-meta">
+        {% if page.tag %}<span class="tag">{{ page.tag }}</span>{% endif %}
+        <span>{{ page.date | date: "%Y. %B %-d." }}</span>
+        {% if page.grade %}<span>·</span><span>{{ page.grade }}</span>{% endif %}
+      </div>
+      <h1 style="font-size:clamp(1.8rem,3.4vw,2.5rem); margin-bottom:18px;">{{ page.title }}</h1>
+      {{ content }}
+    </div>
+  </div>
+</section>
+
+{% if page.gallery %}
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom:22px;">
+      <div class="eyebrow">Galéria</div>
+      <h2 style="font-size:1.5rem;">A nap képekben</h2>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      {% for photo in page.gallery %}
+      <button class="gallery-item" data-index="{{ forloop.index0 }}" aria-label="Kép megnyitása nagyítva: {{ photo.alt }}">
+        <img src="{{ photo.src | relative_url }}" alt="{{ photo.alt }}">
+      </button>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="legacy">
+  <div class="wrap legacy-inner">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+    <div>
+      <h2>Nézd meg a többi hírt is</h2>
+      <p>Több beszámoló, verseny és iskolai esemény vár rád a Hírek oldalon.
+      &nbsp;<a href="{{ '/hirek.html' | relative_url }}" class="link-arrow" style="margin-left:4px;">Vissza a Hírekhez
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a></p>
+    </div>
+  </div>
+</section>
+
+{% if page.gallery %}
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Bezárás">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Előző kép">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <img id="lightboxImg" src="" alt="">
+  <button class="lightbox-nav next" id="lightboxNext" aria-label="Következő kép">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+  <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
+
+<script>
+  const galleryButtons = Array.from(document.querySelectorAll('#galleryGrid .gallery-item'));
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  let currentIndex = 0;
+
+  function openLightbox(index){
+    currentIndex = index;
+    const img = galleryButtons[index].querySelector('img');
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightboxCaption.textContent = img.alt;
+    lightbox.classList.add('open');
+  }
+  function closeLightbox(){
+    lightbox.classList.remove('open');
+    lightboxImg.src = '';
+  }
+  function showNext(delta){
+    currentIndex = (currentIndex + delta + galleryButtons.length) % galleryButtons.length;
+    openLightbox(currentIndex);
+  }
+
+  galleryButtons.forEach((btn, i) => btn.addEventListener('click', () => openLightbox(i)));
+  document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+  document.getElementById('lightboxPrev').addEventListener('click', () => showNext(-1));
+  document.getElementById('lightboxNext').addEventListener('click', () => showNext(1));
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') showNext(-1);
+    if (e.key === 'ArrowRight') showNext(1);
+  });
+</script>
+{% endif %}

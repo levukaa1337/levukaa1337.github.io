@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% if page.title %}{{ page.title }} | {% endif %}Móricz Zsigmond Gimnázium</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
+</head>
+<body>
+
+<a href="#tartalom" class="skip-link">Ugrás a tartalomra</a>
+
+<header>
+  <div class="wrap nav-row">
+    <a href="{{ '/' | relative_url }}" class="brand">
+      <span class="monogram">MZS</span>
+      <span class="brand-text">
+        <span class="eyebrow">Tiszakécske</span><br>
+        <span class="school-name">Móricz Zsigmond Gimnázium</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Menü megnyitása" aria-expanded="false" id="navToggle">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <nav class="main-nav" id="mainNav">
+      <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Kezdőlap</a>
+      <a href="{{ '/rolunk.html' | relative_url }}" {% if page.url contains '/rolunk' %}aria-current="page"{% endif %}>Rólunk</a>
+      <a href="{{ '/beiskolazas.html' | relative_url }}" {% if page.url contains '/beiskolazas' %}aria-current="page"{% endif %}>Beiskolázás</a>
+      <a href="{{ '/hirek.html' | relative_url }}" {% if page.url contains '/hirek' %}aria-current="page"{% endif %}>Hírek</a>
+      <a href="{{ '/kapcsolat.html' | relative_url }}" {% if page.url contains '/kapcsolat' %}aria-current="page"{% endif %}>Kapcsolat</a>
+    </nav>
+  </div>
+</header>
+
+<main id="tartalom">
+  {{ content }}
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="{{ '/' | relative_url }}" class="brand" style="margin-bottom:16px;">
+          <span class="monogram">MZS</span>
+          <span class="brand-text school-name">Móricz Zsigmond<br>Gimnázium</span>
+        </a>
+        <p>Tiszakécske, a Tisza partján<br>Magyarország</p>
+      </div>
+      <div>
+        <h4>Elérhetőség</h4>
+        <ul>
+          <li><a href="{{ '/kapcsolat.html' | relative_url }}">Cím és térkép</a></li>
+          <li><a href="{{ '/kapcsolat.html' | relative_url }}">Telefonszám</a></li>
+          <li><a href="{{ '/kapcsolat.html' | relative_url }}">E-mail</a></li>
+          <li><a href="{{ '/kapcsolat.html' | relative_url }}">Ügyintézés</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Gyors linkek</h4>
+        <ul>
+          <li><a href="{{ '/rolunk.html' | relative_url }}">Rólunk</a></li>
+          <li><a href="{{ '/beiskolazas.html' | relative_url }}">Beiskolázás</a></li>
+          <li><a href="{{ '/hirek.html' | relative_url }}">Hírek</a></li>
+          <li><a href="{{ '/#nyilt-napok' | relative_url }}">Nyílt napok</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© {{ 'now' | date: "%Y" }} Móricz Zsigmond Gimnázium, Tiszakécske</span>
+      <span>Tervezte: közösségünk számára, szeretettel</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const mainNav = document.getElementById('mainNav');
+  navToggle.addEventListener('click', () => {
+    const open = mainNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  mainNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    mainNav.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }));
+</script>
+</body>
+</html>
