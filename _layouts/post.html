@@ -42,7 +42,7 @@ layout: default
     <div class="gallery-grid" id="galleryGrid">
       {% for photo in page.gallery %}
       <button class="gallery-item" data-index="{{ forloop.index0 }}" aria-label="Kép megnyitása nagyítva: {{ photo.alt }}">
-        <img src="{{ photo.src | relative_url }}" alt="{{ photo.alt }}">
+        <img src="{{ photo.src | relative_url }}" alt="{{ photo.alt }}" loading="lazy" decoding="async">
       </button>
       {% endfor %}
     </div>
