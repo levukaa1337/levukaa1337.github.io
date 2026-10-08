@@ -1,7 +1,7 @@
 ---
 title: Beiskolázási szórólapjaink
 date: 2026-10-08T14:00:00.000+02:00
-tag: beikolázás
+tag: beiskolázás
 excerpt: Beiskolázási szórólapjaink
 thumbnail: /images/hirek/szórólap-tagozatok.jpg
 gallery:
