@@ -7,4 +7,4 @@ thumbnail: /images/hirek/móricz-zsigmond-gimnázium-tiszakécske-szórólap.png
 ---
 Itt töltheted le a részletes beiskolázási tájékoztatónkat (PDF formátum):
 
-https://drive.google.com/drive/u/1/folders/1U5oiboOuoivuV0nWLBXa9rtI9SELN1q6
+<https://drive.google.com/drive/u/1/folders/1U5oiboOuoivuV0nWLBXa9rtI9SELN1q6>
