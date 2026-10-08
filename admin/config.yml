@@ -26,6 +26,7 @@ collections:
         name: "gallery"
         widget: "list"
         required: false
+        hint: "Képenként ideális méret: kb. 1600 px széles, 200-400 KB. A fájlnévben ne legyen ékezet vagy szóköz."
         fields:
           - { label: "Fotó", name: "src", widget: "image" }
           - { label: "Fotó leírása (kép alt szövege)", name: "alt", widget: "string" }
