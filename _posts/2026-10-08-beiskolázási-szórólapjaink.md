@@ -3,7 +3,7 @@ title: Beiskolázási szórólapjaink
 date: 2026-10-08T14:00:00.000+02:00
 tag: beiskolázás
 excerpt: Beiskolázási szórólapjaink
-thumbnail: https://drive.google.com/file/d/1DdqqcDdXj6eE7vGs4c3fvvYCdcswqYQF/view?usp=drive_link
+thumbnail: /images/hirek/258_dxo.jpg
 gallery:
   - src: /images/hirek/szórólap-tagozatok.jpg
     alt: Nyílt napok és tagozatok
