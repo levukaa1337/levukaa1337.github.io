@@ -10,4 +10,4 @@ gallery:
   - src: /images/hirek/móricz-zsigmond-gimnázium-tiszakécske-szórólap.png
     alt: Általános szórólap
 ---
-A következő tanévre vonatkozó szórólapjaink megjelentek, amelyek digatalizált formátumban itt is elérhetők.
+A következő tanévre vonatkozó szórólapjaink megjelentek, amelyek digitalizált formátumban itt is elérhetők.
