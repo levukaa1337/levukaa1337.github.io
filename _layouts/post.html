@@ -22,7 +22,9 @@ layout: default
     <div class="prose">
       <div class="article-meta">
         {% if page.tag %}<span class="tag">{{ page.tag }}</span>{% endif %}
-        <span>{{ page.date | date: "%Y. %B %-d." }}</span>
+        {% assign honapok = "január,február,március,április,május,június,július,augusztus,szeptember,október,november,december" | split: "," %}
+        {% assign ho = page.date | date: "%-m" | minus: 1 %}
+        <span>{{ page.date | date: "%Y." }} {{ honapok[ho] }} {{ page.date | date: "%-d." }}</span>
         {% if page.grade %}<span>·</span><span>{{ page.grade }}</span>{% endif %}
       </div>
       <h1 style="font-size:clamp(1.8rem,3.4vw,2.5rem); margin-bottom:18px;">{{ page.title }}</h1>
