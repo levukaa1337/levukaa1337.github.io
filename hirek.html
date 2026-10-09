@@ -25,7 +25,9 @@ title: Hírek
           {% endif %}
         </div>
         <div class="news-card-body">
-          <span class="news-date">{{ post.date | date: "%Y. %B %-d." }}</span>
+          {% assign honapok = "január,február,március,április,május,június,július,augusztus,szeptember,október,november,december" | split: "," %}
+          {% assign ho = post.date | date: "%-m" | minus: 1 %}
+          <span class="news-date">{{ post.date | date: "%Y." }} {{ honapok[ho] }} {{ post.date | date: "%-d." }}</span>
           <h3>{{ post.title }}</h3>
           <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
           <span class="news-readmore">Cikk elolvasása →</span>
