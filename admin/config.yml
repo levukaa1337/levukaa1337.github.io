@@ -7,7 +7,10 @@ backend:
 # Where uploaded photos get stored in the repo, and how they're linked in pages.
 media_folder: "images/hirek"
 public_folder: "/images/hirek"
-
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
 collections:
   - name: "hirek"
     label: "Hírek (Iskolai hírek)"
