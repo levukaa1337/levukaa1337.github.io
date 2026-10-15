@@ -26,7 +26,7 @@ gallery:
 
 \-	Anna, Te, aki bátran mondhatjuk, hogy profi szinten foglalkozol színészettel, mesélnél az ott megélt tapasztalatokról és élményekről? Hogyan kezdődött a történeted?
 
-**Az első nagyszínpadi szereplésemet 14 évesen éltem meg a Kecskeméti Katona József színházban, *A légy jó mindhalálig* című darabban, akkor még mint mellékszereplő. Ez a lehetőség volt az, ami igazán megadta a lendületet. Azonban addig is a szereplés az egész életemet végigkísérte. Egészen fiatalon, első osztályos koromtól kezdve mesemondó, versmondó versenyekre jártam. Mindig felkértek az iskolai nemzeti ünnepekre, és ezeket szívesen csináltam, megvolt bennem ez a kis „szereplési vágy”.**
+**Az első nagyszínpadi szereplésemet 13 évesen éltem meg a Kecskeméti Katona József színházban, *A légy jó mindhalálig* című darabban, akkor még mint mellékszereplő. Ez a lehetőség volt az, ami igazán megadta a lendületet. Azonban addig is a szereplés az egész életemet végigkísérte. Egészen fiatalon, első osztályos koromtól kezdve mesemondó, versmondó versenyekre jártam. Mindig felkértek az iskolai nemzeti ünnepekre, és ezeket szívesen csináltam, megvolt bennem ez a kis „szereplési vágy”.**
 
 \-	És hogyan kerültél bele a színészi pálya folyamatos mozgásába?
 
@@ -52,8 +52,6 @@ gallery:
 
 **Ez egy nagyon jó kérdés! Azt gondolom, hogy minél több dologban érdemes kipróbálniuk magukat. Nem biztos, hogy én vagyok a legjobb példa erre, én valahogy egész életemben tudtam, hogy ezt szeretném, nem is feltétlen tudom pontosan miért. Lehet azért, mert mindig is ilyen extrovertált típus voltam, ezért adott volt. Azt gondolom, először az embernek meg kell ismernie magát, ha valaki introvertált, és nem szeretne emberekkel foglalkozni, akkor neki ez a szíve joga, és ő is lehet ugyanolyan boldog. Így látod majd mi az, amit nem csak elviselni tudsz, hanem élvezni is. Jelentkezni és tapasztalni kell; ha 16 évesen azon a napon nem jelentkezek a táborba, nem biztos, hogy itt lennék.  Erre bátorítok mindenkit. Nagyon értékes társaságokat és barátságokat lehet az ilyen tevékenységekben szerezni.**
 
+*Képek: Benkő Emese*
 
-
-
-
-*Interjút készítette: Pántya Levente 12. A*
+*Interjút készítette: Pántya Levente \[12. A]*
